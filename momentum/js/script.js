@@ -69,7 +69,7 @@ function showTime() {
   }
 
   const currentDate = new Date().toLocaleDateString(
-    stateLocal.language,
+    stateLocal.language || state.language,
     options
   );
 
