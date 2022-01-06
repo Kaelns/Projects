@@ -58,20 +58,17 @@ function showTime() {
     hour12: true,
   };
 
-  if (stateLocal) {
-    stateLocal.language === "en-US"
-      ? (options.hour12 = true)
-      : (options.hour12 = false);
-  } else {
-    state.language === "en-US"
-      ? (options.hour12 = true)
-      : (options.hour12 = false);
-  }
+  // if (stateLocal) {
+  //   stateLocal.language === "en-US"
+  //     ? (options.hour12 = true)
+  //     : (options.hour12 = false);
+  // } else {
+  //   state.language === "en-US"
+  //     ? (options.hour12 = true)
+  //     : (options.hour12 = false);
+  // }
 
-  const currentDate = new Date().toLocaleDateString(
-    stateLocal.language || state.language,
-    options
-  );
+  const currentDate = new Date().toLocaleDateString(state.language, options);
 
   // if(stateLocal) {
   //   (stateLocal.language === "en-US")
