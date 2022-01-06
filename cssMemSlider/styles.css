@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(196, 126, 35), rgb(245, 158, 44));
+}
+
+body {
+  font-size: 25px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  cursor: default;
+}
+
+.slider__wrapper {
+  width: 64rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to bottom, #ebd7ab, #dfd8ca, #e9cd90);
+  background-color: rgb(165, 93, 0);
+  transition: all 0.3s ease;
+}
+
+/*_________________Slides_________________*/
+
+.slides {
+  list-style: none;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  border-radius: 0.5rem;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s linear;
+  border-radius: 0.5rem;
+}
+
+.slide__img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+#btn-1:checked ~ .slides > .slide,
+#btn-1:checked ~ .slider__bottom > .slides-text__wrapper > .slide__text {
+  transform: translateX(0);
+}
+
+#btn-2:checked ~ .slides > .slide,
+#btn-2:checked ~ .slider__bottom > .slides-text__wrapper > .slide__text {
+  transform: translateX(-100%);
+}
+
+#btn-3:checked ~ .slides > .slide,
+#btn-3:checked ~ .slider__bottom > .slides-text__wrapper > .slide__text {
+  transform: translateX(-200%);
+}
+
+#btn-4:checked ~ .slides > .slide,
+#btn-4:checked ~ .slider__bottom > .slides-text__wrapper > .slide__text {
+  transform: translateX(-300%);
+}
+
+/*_________________Slider bottom_________________*/
+
+.slider__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5rem 0 1rem;
+}
+
+.slides-text__wrapper {
+  list-style: none;
+  width: 70%;
+  overflow: hidden;
+  display: flex;
+}
+
+.slide__text {
+  min-width: 100%;
+  font-weight: bold;
+  transition: transform 0.3s linear;
+}
+
+.slider__controls {
+  display: flex;
+}
+
+input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.slider__controls label {
+  height: 1.7rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.slider__controls label:before {
+  content: "";
+  display: inline-block;
+  border: none;
+  height: 1.1rem;
+  width: 1.1rem;
+  background-color: rgb(218, 134, 26);
+  border-radius: 50%;
+  transition: all 0.4s ease-out;
+}
+
+.slider__controls label:hover:before {
+  background-color: rgb(145, 10, 10);
+}
+
+.slider__controls label:active:before {
+  background-color: rgb(255, 0, 0);
+}
+
+#btn-1:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-1"]:before,
+#btn-2:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-2"]:before,
+#btn-3:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-3"]:before,
+#btn-4:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-4"]:before {
+  background-color: transparent;
+  border: solid 4px rgb(218, 134, 26);
+}
+
+#btn-1:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-1"]:hover:before,
+#btn-2:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-2"]:hover:before,
+#btn-3:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-3"]:hover:before,
+#btn-4:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-4"]:hover:before {
+  background-color: transparent;
+  border: solid 4px rgb(145, 10, 10);
+}
+
+#btn-1:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-1"]:active:before,
+#btn-2:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-2"]:active:before,
+#btn-3:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-3"]:active:before,
+#btn-4:checked
+  ~ .slider__bottom
+  > .slider__controls
+  > label[for="btn-4"]:active:before {
+  background-color: transparent;
+  border: solid 4px rgb(255, 0, 0);
+}
+
+@media (max-width: 1024px) {
+  .slider__wrapper {
+    width: 95vw;
+  }
+
+  .slides-text__wrapper {
+    width: 100%;
+  }
+
+  .slider__bottom {
+    justify-content: start;
+    flex-direction: column-reverse;
+  }
+
+  .slider__controls {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+
+  .slider__bottom {
+    margin: 1rem 0;
+  }
+
+  .slides {
+    height: max-content;
+    background: linear-gradient(to bottom, #c98f12, #dfa833);
+  }
+
+  .slide {
+    align-items: center;
+  }
+
+  .slide__img {
+    height: max-content;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 0.5rem;
+  }
+}

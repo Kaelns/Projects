@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MemeSlider</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="slider__wrapper">
+      <input type="radio" name="toggle" id="btn-1" checked />
+      <input type="radio" name="toggle" id="btn-2" />
+      <input type="radio" name="toggle" id="btn-3" />
+      <input type="radio" name="toggle" id="btn-4" />
+
+      <ul class="slides">
+        <li class="slide" id="slide-1">
+          <img src="./assets/img/1.jpg" alt="Mem" class="slide__img" />
+        </li>
+        <li class="slide" id="slide-2">
+          <img src="./assets/img/2.jpg" alt="Mem" class="slide__img" />
+        </li>
+        <li class="slide" id="slide-3">
+          <img src="./assets/img/3.jpg" alt="Mem" class="slide__img" />
+        </li>
+        <li class="slide" id="slide-4">
+          <img src="./assets/img/4.jpg" alt="Mem" class="slide__img" />
+        </li>
+      </ul>
+
+      <div class="slider__bottom">
+        <ul class="slides-text__wrapper">
+          <li class="slide__text">How</li>
+          <li class="slide__text">is</li>
+          <li class="slide__text">it</li>
+          <li class="slide__text">works</li>
+        </ul>
+
+        <div class="slider__controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+          <label for="btn-4"></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
