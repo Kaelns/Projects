@@ -1,0 +1,23 @@
+const settingText = [
+  "Settings",
+  "Visibility:",
+  "Time",
+  "Date",
+  "Greeting",
+  "Quote",
+  "Weather",
+  "Audio",
+  "Photo source:",
+  "Language:",
+  "Настройки",
+  "Видимость:",
+  "Время",
+  "Дата",
+  "Приветсвие",
+  "Цитата",
+  "Погода",
+  "Аудио",
+  "Источник фото:",
+  "Язык:",
+];
+export default settingText;
