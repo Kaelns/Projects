@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="libs/codeschool.min.css" />
+    <title>CV</title>
+  </head>
+  <body>
+    <header class="header wrapper">
+      <nav class="header__nav">
+        <ul class="header__nav__wrapper">
+          <li class="nav__text">
+            <a class="link" href="#contacts">Contacts</a>
+          </li>
+          <li class="nav__text">
+            <a class="link" href="#skills">Skills</a>
+          </li>
+          <li class="nav__text">
+            <a class="link" href="#languages">Languages</a>
+          </li>
+          <li class="nav__text">
+            <a class="link" href="#about-me">About Me</a>
+          </li>
+          <li class="nav__text">
+            <a class="link" href="#education">Education</a>
+          </li>
+          <li class="nav__text">
+            <a class="link" href="#code-example">Code Example</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- !Button______________________________________________________________ -->
+    <button class="button burger-btn" type="button">
+      <span class="burger-btn__line"></span>
+    </button>
+    <main class="main wrapper">
+      <!-- !Aside______________________________________________________________ -->
+      <aside class="aside">
+        <figure class="aside__avatar">
+          <img src="images/avatar.jpg" alt="Avatar" class="aside__img" />
+        </figure>
+        <div class="name__wrapper">
+          <h1 class="name__title">Yury Ahanouski</h1>
+          <h3 class="name__subtitle">Web developer</h3>
+        </div>
+        <!-- Contacts__________________________________________________________ -->
+        <div class="document__wrapper" id="contacts">
+          <h4 class="document__title">Contacts</h4>
+          <ul>
+            <li class="contact__block">
+              <img src="icons/pin.svg" alt="Location:" />
+              Minsk, Belarus
+            </li>
+            <li class="contact__block">
+              <img src="icons/phone.svg" alt="Phone" />
+              +375 25 772-09-34
+            </li>
+            <li class="contact__block">
+              <img src="icons/email.svg" alt="E-mail" />
+              uraaru@live.com
+            </li>
+            <li class="contact__block">
+              <img src="icons/github.svg" alt="GitHub" />
+              <a
+                href="https://github.com/Kaelns"
+                class="contact__link"
+                target="_blank"
+                >Kaelns</a
+              >
+            </li>
+            <li class="contact__block">
+              <img src="icons/telegram.svg" alt="Telegram" />
+              <a
+                href="https://t.me/Kaelns"
+                class="contact__link"
+                target="_blank"
+                >@Kaelns</a
+              >
+            </li>
+            <li class="contact__block">
+              <img src="icons/vk.svg" alt="VK" />
+              <a
+                href="https://vk.com/kaelnslarien"
+                class="contact__link"
+                target="_blank"
+                >kaelnslarien</a
+              >
+            </li>
+            <li class="contact__block">
+              <img src="icons/youtube.svg" alt="YouTube" />
+              <a
+                href="https://www.youtube.com/channel/UCDk2HbuqZYeDHuIPtGbr8qQ"
+                class="contact__link"
+                target="_blank"
+                >Kaeln Larien</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Skills__________________________________________________________ -->
+        <div class="document__wrapper" id="skills">
+          <h4 class="document__title">Skills</h4>
+          <ul>
+            <li class="skill__block">HTML</li>
+            <li class="skill__block">CSS</li>
+            <li class="skill__block">JS Basic</li>
+            <li class="skill__block">Git</li>
+          </ul>
+        </div>
+        <!-- Languages__________________________________________________________ -->
+        <div class="document__wrapper" id="languages">
+          <h4 class="document__title">Languages</h4>
+          <ul>
+            <li class="language__block">Russian - native</li>
+            <li class="language__block">English - A2</li>
+            <li class="language__block">Polish - Basic</li>
+          </ul>
+        </div>
+      </aside>
+      <!-- ! Section__________________________________ -->
+      <section class="section">
+        <div class="document__wrapper" id="about-me">
+          <h4 class="document__title">About Me</h4>
+          <p class="about-me__text">
+            I am 21 years old and I am very interested in programming. Honestly
+            without any exaggeration I am quite strong in learning something
+            because I have a good memory and the ability to apply the knowledge
+            laid down in it, and I am also diligent in order to finish my work.
+            In addition, I am quite sociable and can find a common language with
+            other people.
+          </p>
+        </div>
+        <!-- Education__________________________________________________________ -->
+        <div class="document__wrapper" id="education">
+          <h4 class="document__title">Education</h4>
+          <ul>
+            <li class="education__elem1">
+              Belarusian National Technical University
+              <ul>
+                <li class="education__elem2 elem3">
+                  Power engineer of electric power stations
+                </li>
+              </ul>
+            </li>
+            <li class="education__elem1">
+              Courses
+              <ul>
+                <li class="education__elem2 elem3">
+                  JS, CSS, HTML courses on Code Basics
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <img
+            class="document__image"
+            src="images/courses.png"
+            alt="html, css and js"
+          />
+        </div>
+        <!-- Code-example__________________________________________________________ -->
+        <div class="document__wrapper" id="code-example">
+          <h4 class="document__title">Code example</h4>
+
+          <pre>
+            <code class="code__item">
+     const encrypt = (str) => {
+      let result = '';
+
+      for (let i = 0; i &lt; str.length; i += 2) {
+       const nextNumber = str[ i + 1 ] || '';
+        result = `${result}${ nextNumber }${str[ i ]}`;
+      }
+       return result;
+     };
+          </code>
+        </pre>
+        </div>
+      </section>
+    </main>
+    <!-- ! Footer____________________________________ -->
+    <footer class="footer wrapper">
+      <div class="footer__block">
+        <a href="https://github.com/Kaelns" target="_blank">
+          <img src="./icons/github.svg" alt="Github" class="footer__img-1" />
+        </a>
+      </div>
+      <div class="footer__text">2021</div>
+      <div class="footer__block">
+        <a href="https://rs.school/js/" target="_blank">
+          <img
+            src="./icons/rsschool.svg"
+            alt="Rsschool"
+            class="footer__img-2"
+          />
+        </a>
+      </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script src="libs/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
